@@ -46,17 +46,30 @@ describe('validator module performs basic validation of', () => {
 describe('validator module performs complex validations', () => {
 
   it('validates the presence of required object properties at any level', () => {
-    // i.e. does person.hair.color exist and have a good value, not just person.hair
-    expect(true).toBeFalsy();
+    const fred = {
+        id:38,
+        name:'Freddy McCoder',
+        age: 20 ,
+        children:[],
+      };
+    expect(validator.isObjest(fred)).toBeTruthy();
   });
-
+  it('validates if theres a key ', () => {
+    const fred = {
+        id:38,
+        name:'Freddy McCoder',
+        age: 20 ,
+        children:[],
+      };
+    expect(validator.isThereKeys(fred)).toBeTruthy();
+  });
   it('validates the proper types of object properties', () => {
-    // i.e. person.name must be a string, etc.
+    
     expect(true).toBeFalsy();
   });
 
   it('validates the types of values contained in an array', () => {
-    // i.e. an array of all strings or numbers
+    
     expect(true).toBeFalsy();
   });
 
@@ -65,10 +78,6 @@ describe('validator module performs complex validations', () => {
     expect(true).toBeFalsy();
   });
 
-  it('validates a value array against an approved list', () => {
-    //  i.e. 
-    expect(true).toBeFalsy();
-  });
+  // TODO: Cover so, so many more cases
 
 });
-
