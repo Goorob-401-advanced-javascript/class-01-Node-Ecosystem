@@ -2,7 +2,7 @@
 
 ### Author: Ghourob Ahmad Alswalqah
 ### Links and Resources
-- [submission PR](http://xyz.com)
+- [submission PR](https://github.com/Goorob-401-advanced-javascript/class-01-Node-Ecosystem/pull/1)
 - [ci/cd](http://xyz.com) (GitHub Actions)
 
 
