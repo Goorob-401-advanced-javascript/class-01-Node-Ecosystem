@@ -14,38 +14,43 @@ describe('validator module performs basic validation of', () => {
     let func = () => {};
     let bool = false;
     expect(validator.isString(str)).toBeTruthy();
-    expect(validator.isString(num)).toBeFalsy();
-    expect(validator.isString(arr)).toBeFalsy();
-    expect(validator.isString(obj)).toBeFalsy();
-    expect(validator.isString(func)).toBeFalsy();
-    expect(validator.isString(bool)).toBeFalsy();
+    // expect(validator.isNum(num)).toBeTruthy();
+    // expect(validator.isString(arr)).toBeFalsy();
+    // expect(validator.isString(obj)).toBeFalsy();
+    // expect(validator.isString(func)).toBeFalsy();
+    // expect(validator.isString(bool)).toBeFalsy();
   });
 
   it('numbers', () => {
-    expect(true).toBeFalsy();
+    let num = 6 ;
+    expect(validator.isNum(num)).toBeTruthy();
   });
 
   it('arrays', () => {
-    expect(true).toBeFalsy();
+    let arr =[];
+    expect(validator.isObjest(arr)).toBeTruthy();
   });
 
   it('objects', () => {
-    expect(true).toBeFalsy();
+    let obj = {};
+    expect(validator.isObjest(obj)).toBeTruthy();
   });
 
   it('booleans', () => {
-    expect(true).toBeFalsy();
+    let bool = false ;
+    expect(validator.isBooleen(bool)).toBeTruthy();
   });
 
   it('functions', () => {
-    expect(true).toBeFalsy();
+    let func = {};
+    expect(validator.isObjest(func)).toBeTruthy();
   });
 
 });
 
 describe('validator module performs complex validations', () => {
 
-  it('validates the presence of required object properties at any level', () => {
+  it('validates if the input is function ', () => {
     const fred = {
         id:38,
         name:'Freddy McCoder',
@@ -65,17 +70,45 @@ describe('validator module performs complex validations', () => {
   });
   it('validates the proper types of object properties', () => {
     
-    expect(true).toBeFalsy();
+    const fred = {
+      id:38,
+      name:'Freddy McCoder',
+      age: 20 ,
+   
+    };
+  
+    expect(validator.validateObjValueType(fred)).toBeTruthy();
+  });
+
+  it('validates the proper types of object properties', () => {
+    
+    const fred = {
+      id:38,
+      name:'Freddy McCoder',
+      age: 20 ,
+      children:[],
+    };
+    expect(validator.isThereValues(fred)).toBeTruthy();
   });
 
   it('validates the types of values contained in an array', () => {
-    
-    expect(true).toBeFalsy();
+    const fred = {
+      id:38,
+      name:'Freddy McCoder',
+      age: 20 ,
+      children:[],
+    };
+    expect(validator.validateObjValueIfArr(fred.children)).toBeTruthy();
   });
 
   it('validates a value array against an approved list', () => {
-    // i.e. a string might only be allowed to be "yes" or "no"
-    expect(true).toBeFalsy();
+    const fred = {
+      id:38,
+      name:'Freddy McCoder',
+      age: 20 ,
+      children:[],
+    };
+    expect(validator.arrHasAnValues(fred)).toBeFalsy();
   });
 
   // TODO: Cover so, so many more cases
