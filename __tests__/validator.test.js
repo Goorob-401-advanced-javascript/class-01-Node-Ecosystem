@@ -27,12 +27,12 @@ describe('validator module performs basic validation of', () => {
   });
 
   it('arrays', () => {
-    let arr =[];
+    let arr =['hello',7];
     expect(validator.isObjest(arr)).toBeTruthy();
   });
 
   it('objects', () => {
-    let obj = {};
+    let obj = {name : 'goorob'};
     expect(validator.isObjest(obj)).toBeTruthy();
   });
 
@@ -42,8 +42,8 @@ describe('validator module performs basic validation of', () => {
   });
 
   it('functions', () => {
-    let func = {};
-    expect(validator.isObjest(func)).toBeTruthy();
+    let func = ()=>{};
+     expect(validator.isString(func)).toBeFalsy();
   });
 
 });
