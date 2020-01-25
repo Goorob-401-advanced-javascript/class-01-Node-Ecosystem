@@ -3,8 +3,8 @@
 ### Author: Ghourob Ahmad Alswalqah
 ### Links and Resources
 - [submission PR](https://github.com/Goorob-401-advanced-javascript/class-01-Node-Ecosystem/pull/1)
-[submission PR](https://github.com/Goorob-401-advanced-javascript/class-01-Node-Ecosystem/pull/2) 
-- [ci/cd](http://xyz.com) (GitHub Actions)
+-[submission PR](https://github.com/Goorob-401-advanced-javascript/class-01-Node-Ecosystem/pull/2) 
+- [ci/cd](https://github.com/Goorob-401-advanced-javascript/class-01-Node-Ecosystem/actions) (GitHub Actions)
 
 
 #### How to initialize/run your application (where applicable)
